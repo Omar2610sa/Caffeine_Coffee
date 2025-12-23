@@ -102,7 +102,9 @@ a {
 #header .nav-bar ul li a:hover {
     color: var(--light-brown);
 }
-
+.humberger{
+    display: none;
+}
 /* Header  End*/
 /* Home start */
 #home {

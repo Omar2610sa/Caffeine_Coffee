@@ -52,20 +52,57 @@
 
 @media (max-width : 750px) {
 
-    .container,
-    #header .nav-bar {
-        max-width: 350px;
-    }
+    /* Header start */
 
+    .humberger{
+        position: relative;
+        display: block;
+        font-size: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    .humberger i {
+        position: absolute;
+        inset: 0;
+        width: max-content;
+        height: max-content;
+        margin: auto;
+        opacity: 0;
+        transition: 0.3s all ease;
+    }
+    .humberger i.active{
+        opacity: 1;
+        transform: rotate(180deg);
+    }
     #header .nav-bar {
-        flex-direction: column;
         margin-bottom: 10px;
+        position: relative;
     }
-
+    #header .nav-bar ul{
+        position: absolute;
+        flex-direction: column;
+        top: 50px;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        opacity: 0;
+        transition: 0.3s all ease;
+    }
+    #header .nav-bar ul.active{
+        opacity: 1;
+    }
+    #header .nav-bar ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #000;
+    }
     #header .nav-bar .logo img {
         width: 150px;
     }
+    #header .nav-bar ul li:last-child{
+        border: none;
+    }
 
+    /* header End */
     #home .container .content img,
     #about .container .content img {
         width: 300px;
@@ -147,7 +184,7 @@
         font-size: 20px;
     }
 
-    #footer .footer-top   p {
+    #footer .footer-top p {
         font-size: 14px;
         margin: 20px 0;
     }
