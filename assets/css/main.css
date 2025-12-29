@@ -215,7 +215,23 @@ a {
     flex-direction: column;
     padding: 5rem 0;
 }
-
+#menu .title .filter-button{
+    margin: 2rem 0;
+}
+#menu .title .filter-button button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--dark-gray);
+    color: #fff;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+#menu .title .filter-button button:hover{
+    background-color: var(--light-brown);
+}
 #menu .container .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
